@@ -53,10 +53,19 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['login'] = 'authController';
+
 $route['dashboard'] = 'dashboardController';
 $route['buku'] = 'bukuController';
 $route['post-buku'] = 'bukuController/addBuku';
+$route['edit-buku/(:any)'] = 'bukuController/editBuku/$1';
+$route['update-buku/(:any)'] = 'bukuController/updateBuku/$1';
+$route['delete-buku/(:any)'] = 'bukuController/deleteBuku/$1';
+$route['buku/detail/(:any)'] = 'bukuController/detailBuku/$1';
+
 $route['kategori'] = 'kategoriController';
 $route['post-kategori'] = 'kategoriController/addKategori';
+
+
 $route['anggota'] = 'anggotaController';
 $route['post-anggota'] = 'anggotaController/addAnggota';
